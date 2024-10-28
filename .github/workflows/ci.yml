@@ -19,7 +19,7 @@ jobs:
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: "cs-1660-a3" # update with your project ID
+          project_id: "cs1660-a3" # update with your project ID
           workload_identity_provider: "projects/935589589866/locations/global/workloadIdentityPools/github/providers/my-repo" # update with your Workload Identity Pool
 
       # configure/login with docker
@@ -38,7 +38,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-central1-docker.pkg.dev/cs-1660-a3/artifact-repo-1/artifact-docker-image:v1
+          tags: us-central1-docker.pkg.dev/cs1660-a3/artifact-repo-1/artifact-docker-image:v1
 # @note: you can use regular docker commands instead of the shared action
 #      - name: Build and Push Without Buildx
 #        run: |
